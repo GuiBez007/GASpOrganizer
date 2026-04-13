@@ -5,7 +5,7 @@ let currentCategory = null;
 let currentFilter = 'all';
 let showColoredBorders = true;
 let isStaggeredMode = false;
-let currentLanguage = 'en';
+let currentLanguage = 'pt';
 
 const appContainer = document.getElementById('app');
 const toggleBtn = document.getElementById('toggle-borders-btn');
