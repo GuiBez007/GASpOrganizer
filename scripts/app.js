@@ -172,7 +172,7 @@ function renderMediaCard(item) {
             <div class="media-info">
                 <p class="media-synopsis">${currentLanguage === 'pt' ? (item.synopsisPT || item.synopsis) : item.synopsis}</p>
                 <a href="${item.url}" target="_blank" rel="noopener noreferrer" class="media-link">
-                    Open ${currentCategory.id === 'games' ? 'on Steam' : 'Link'}
+                    Open Link
                 </a>
             </div>
         </div>
