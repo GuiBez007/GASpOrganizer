@@ -54,7 +54,7 @@ const black_clover = {
 };
 
 const boruto = {
-  title: 'boruto',
+  title: 'boruto: naruto next generations',
   synopsis: 'Son of Naruto Uzumaki, Boruto, follows his father\'s footsteps along with his friends to become great ninjas. Throughout all their adventures, Boruto is determined to make his own mark in the ninja world and step out of his father\'s shadow.',
   synopsisPT: 'Filho de Naruto Uzumaki, Boruto segue os passos de seu pai junto com seus amigos para se tornarem grandes ninjas. Em todas as suas aventuras, Boruto está determinado a deixar sua própria marca no mundo ninja e sair da sombra de seu pai.',
   url: 'https://www.imdb.com/title/tt6350016/',
@@ -283,6 +283,16 @@ const yamada_kun_and_the_seven_witches = {
   status: 'watched'
 };
 
+const claymore = {
+  title: 'claymore',
+  synopsis: 'In a medieval world plagued by shapeshifting demons known as Yoma, a silver-eyed female warrior named Clare embarks on a quest for revenge against the malevolent forces that destroyed her life.',
+  synopsisPT: 'Em um mundo medieval assolado por demônios metamorfos conhecidos como Yoma, uma guerreira de olhos prateados chamada Clare embarca em uma jornada de vingança contra as forças malévolas que destruíram sua vida.',
+  url: 'https://www.imdb.com/title/tt0985457/',
+  thumb: 'https://images.sr.roku.com/idType/roku/context/global/id/3d5ef20e64a35c689d1a37c75c3e1980/images/gracenote/assets/p18468032_b_v11_aa.jpg/magic/396x0/filters:quality(70)',
+  favorite: true,
+  status: 'watched'
+};
+
 export const animeData = [
   akame_ga_kill,
   arcane,
@@ -293,25 +303,24 @@ export const animeData = [
   naruto_shippuden,
   naruto_classico,
   charlotte,
-  death_note,
+  rick_and_morty,
   fairy_tail,
   desencanto,
   final_space,
   gravity_falls,
-  rick_and_morty,
+  death_note,
   sem_maturidade,
   hamtaro,
   hunter_x_hunter,
   inuyasha,
   demon_slayer,
-  // maio_chiki,
   one_piece,
   ousama_game,
   ranma,
   samurai_7,
   samurai_champloo,
   samurai_x,
-  // true_tears,
   yu_yu_hakusho,
   yamada_kun_and_the_seven_witches,
+  claymore
 ];
