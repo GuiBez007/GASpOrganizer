@@ -1,5 +1,5 @@
-import { CATEGORIES, MEDIA_DATA, placeholderX } from './data/_index.js';
-import { DEFAULT_ICONS, DEFAULT_LABELS, PT_LABELS, CATEGORY_FILTERS } from './data/_config.js';
+import { CATEGORIES, MEDIA_DATA, placeholderX } from './data/index.js';
+import { DEFAULT_ICONS, DEFAULT_LABELS, PT_LABELS, CATEGORY_FILTERS } from './data/config.js';
 
 let currentCategory = null;
 let currentFilter = 'all';
