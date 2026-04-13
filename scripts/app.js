@@ -132,16 +132,16 @@ function renderHomeView() {
 
 function getColumnCount() {
     const width = window.innerWidth;
-    if (width >= 1368) return 4;
-    if (width >= 1012) return 3;
-    if (width >= 656) return 2;
+    if (width >= 1000) return 4;
+    if (width >= 750) return 3;
+    if (width >= 500) return 2;
     return 1;
 }
 
 function renderMediaCard(item) {
     const icon = getStatusIcon(item.status, currentCategory.id);
     const label = getStatusLabel(item.status, currentCategory.id);
-    
+
     // Game-specific badges (Current category is games)
     let playerBadge = '';
     if (currentCategory.id === 'games') {
@@ -192,19 +192,19 @@ function renderDetailView() {
     });
 
     // Filtering logic
-    const filteredItems = currentFilter === 'all' 
-        ? allItems 
-        : (currentFilter === 'favorite' 
-            ? allItems.filter(item => item.favorite) 
+    const filteredItems = currentFilter === 'all'
+        ? allItems
+        : (currentFilter === 'favorite'
+            ? allItems.filter(item => item.favorite)
             : (currentFilter === 'singleplayer'
-               ? allItems.filter(item => item.isSingleplayer)
-               : (currentFilter === 'multiplayer'
-                  ? allItems.filter(item => item.isMultiplayer)
-                  : (currentFilter === 'mobile'
-                     ? allItems.filter(item => item.isMobile)
-                     : (currentFilter === 'endless'
-                        ? allItems.filter(item => item.isEndless)
-                        : allItems.filter(item => item.status === currentFilter))))));
+                ? allItems.filter(item => item.isSingleplayer)
+                : (currentFilter === 'multiplayer'
+                    ? allItems.filter(item => item.isMultiplayer)
+                    : (currentFilter === 'mobile'
+                        ? allItems.filter(item => item.isMobile)
+                        : (currentFilter === 'endless'
+                            ? allItems.filter(item => item.isEndless)
+                            : allItems.filter(item => item.status === currentFilter))))));
 
     // Counts for filters (simplified for dynamic keys)
     const filterKeys = getFilterKeys(currentCategory.id);
@@ -229,7 +229,7 @@ function renderDetailView() {
 
     const columnsCount = getColumnCount();
     const columns = Array.from({ length: columnsCount }, () => []);
-    
+
     filteredItems.forEach((item, index) => {
         columns[index % columnsCount].push(item);
     });
@@ -239,11 +239,11 @@ function renderDetailView() {
             <div class="sticky-nav">
                 <header class="view-header">
                     <div class="header-controls">
-                        <button class="back-btn" id="back-btn" style="border: 2px solid var(--accent-color);">← ${currentLanguage === 'en' ? 'Back' : 'Voltar'}</button>
-                        <button class="lang-toggle-btn" id="lang-toggle" style="border: 2px solid var(--accent-color); font-weight: 600;">
+                        <button class="back-btn" id="back-btn">← ${currentLanguage === 'en' ? 'Back' : 'Voltar'}</button>
+                        <button class="lang-toggle-btn" id="lang-toggle">
                             ${currentLanguage === 'en' ? 'Language: 🇺🇸 EN' : 'Idioma: 🇧🇷 PT'}
                         </button>
-                        <button class="filter-btn ${currentFilter === 'favorite' ? 'active' : ''}" id="favorite-toggle" data-filter="favorite" style="margin: 0;">
+                        <button class="filter-btn ${currentFilter === 'favorite' ? 'active' : ''}" id="favorite-toggle" data-filter="favorite">
                             ⭐ ${currentLanguage === 'en' ? 'Favorites' : 'Favoritos'}
                             <span class="filter-count" style="margin-left: 5px;">${counts['favorite']}</span>
                         </button>
